@@ -19,7 +19,6 @@ const args = {
     // On z/OS, you need to use certificates encoded in EBCDIC
     // The APIML stores such certificates in files with `-ebcdic` suffix
     // pfx: process.argv[7] || "../keystore/localhost/localhost.keystore.p12",
-    // passphrase: process.argv[8] || "password"
 };
 
 /**
@@ -43,7 +42,7 @@ function startHttpsService() {
         })
     );
 
-    // REST API endopint:
+    // REST API endpoint:
     app.get("/api/v1/hello", (req, res) => res.json({ greeting: "Hello World!" }));
 
     // Status and health endpoints for Eureka:
