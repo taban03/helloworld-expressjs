@@ -2,15 +2,14 @@
 
 This is an example how an API service implemented using [Node.js](https://nodejs.org/en/) and [Express](https://expressjs.com/) can be registered to the API Mediation Layer. 
 
-There are following files:
  
- - [index.js](index.js) - starts the API service implemented in Express and registers it to the Discovery service
-
- - [apiLayerService.js](apiLayerService.js) - a module that does the registration to the Discovery Service using [eureka-js-client](https://www.npmjs.com/package/eureka-js-client)
+ [index.js](index.js) starts the API service implemented in Express and registers it to the Discovery service using the NodeJS onboarding enabler.
 
  This example contains the full HTTPS validation of both Discovery Service and the Hello World service.
 
  The certicate, private key for the service, and the local CA certificate are loaded from `keystore/localhost/localhost.keystore.p12`.
+ 
+ ## How to run
 
  You can start the service using:
 
@@ -42,3 +41,4 @@ The fields are following:
 - `port` - the port on which the service is listening
 - `serviceId`, `title`, `description`, 
 `homePageUrl`, `statusPageUrl`, `healthCheckUrl`, `routes` - see [Configuration Parameters](https://zowe.github.io/docs-site/latest/guides/api-mediation-onboard-an-existing-rest-api-service-without-code-changes.html#configuration-parameters)
+
